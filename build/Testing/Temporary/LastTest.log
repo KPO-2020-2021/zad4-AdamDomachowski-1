@@ -1,0 +1,25 @@
+Start testing: May 23 21:17 CEST
+----------------------------------------------------------
+1/1 Testing: program.unit_tests
+1/1 Test: program.unit_tests
+Command: "/home/adam/programowanie/zad4-AdamDomachowski-1/build/unit_tests"
+Directory: /home/adam/programowanie/zad4-AdamDomachowski-1/build/tests
+"program.unit_tests" start time: May 23 21:17 CEST
+Output:
+----------------------------------------------------------
+[doctest] doctest version is "2.4.5"
+[doctest] run with "--help" for options
+
+===============================================================================
+[doctest] test cases: 30 | 30 passed | 0 failed | 0 skipped
+[doctest] assertions: 51 | 51 passed | 0 failed |
+[doctest] Status: SUCCESS!
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"program.unit_tests" end time: May 23 21:17 CEST
+"program.unit_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: May 23 21:17 CEST
