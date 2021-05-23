@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Rotacje 3D: Plik źródłowy scena.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Rotacje 3D
+   &#160;<span id="projectnumber">1.0 v.</span>
+   </div>
+   <div id="projectbrief">Adam Domachowski nr 259229.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('scena_8cpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">scena.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="scena_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="scena_8hh.html">scena.hh</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classscena.html#a152626dcaf5c3bbb9c803a3134999d2f">   13</a></span>&#160;<a class="code" href="classscena.html#a152626dcaf5c3bbb9c803a3134999d2f">scena::scena</a>(){</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="comment">/*wspolrzedne srodka*/</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">double</span> wsp[]={20,30,10}; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_vector.html">Vector3D</a> A(wsp);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="classscena.html#a3d0fbde8b1ccc87f899d467807ffeda0">dodaj_obiekt</a>(A,40,30,20);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classscena.html#a8c8e403835cb87c8fef2aaee42347cab">   28</a></span>&#160;<span class="keyword">const</span> <a class="code" href="classcuboid.html">cuboid</a> &amp; <a class="code" href="classscena.html#a8c8e403835cb87c8fef2aaee42347cab">scena::operator [] </a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> index)<span class="keyword"> const</span>{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">if</span> (index&gt;=<a class="code" href="classscena.html#ad1c370b924a3de1d1ffbd3d5afb81e22">obiekty_na_scenie</a>.size())</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Bledna wartosc indeksu&quot;</span>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classscena.html#ad1c370b924a3de1d1ffbd3d5afb81e22">obiekty_na_scenie</a>.at(index);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classscena.html#aaf6e7e436854da4ca599bf19a8622d9e">   42</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classscena.html#aaf6e7e436854da4ca599bf19a8622d9e">scena::macierz_rotacji</a>(<a class="code" href="class_matrix.html">Matrix3x3</a> <span class="keyword">const</span> &amp; macierz, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> index){</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="class_matrix.html">Matrix3x3</a> temporary = macierz;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="classscena.html#a2c1ca5aaa5df77c00ea49587b2cf71ca">macierze_obrotu</a>.at(index) = temporary * <a class="code" href="classscena.html#a2c1ca5aaa5df77c00ea49587b2cf71ca">macierze_obrotu</a>.at(index);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classscena.html#a0a05317fba40019321f82de59d634d82">   55</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classscena.html#a0a05317fba40019321f82de59d634d82">scena::wektor_przesuniecia</a>(<a class="code" href="class_vector.html">Vector3D</a> <span class="keyword">const</span> &amp; wektor, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> index){</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="class_vector.html">Vector3D</a> temporary = wektor;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="classscena.html#aee07a43031532bfc232d11470f8b6390">wektory_przesuniecia</a>.at(index) = <a class="code" href="classscena.html#aee07a43031532bfc232d11470f8b6390">wektory_przesuniecia</a>.at(index) + temporary;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classscena.html#a049fbf6e48e9c7cc1be5ff45ee420365">   67</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classscena.html#a049fbf6e48e9c7cc1be5ff45ee420365">scena::przesun</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> index){</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="classscena.html#ad1c370b924a3de1d1ffbd3d5afb81e22">obiekty_na_scenie</a>.at(index).translacja(<a class="code" href="classscena.html#aee07a43031532bfc232d11470f8b6390">wektory_przesuniecia</a>.at(index), <a class="code" href="classscena.html#a2c1ca5aaa5df77c00ea49587b2cf71ca">macierze_obrotu</a>.at(index));</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classscena.html#a3d0fbde8b1ccc87f899d467807ffeda0">   83</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classscena.html#a3d0fbde8b1ccc87f899d467807ffeda0">scena::dodaj_obiekt</a>(<a class="code" href="class_vector.html">Vector3D</a> <span class="keyword">const</span> &amp; A, <span class="keywordtype">double</span> <span class="keyword">const</span> &amp; X, <span class="keywordtype">double</span> <span class="keyword">const</span> &amp; Y, <span class="keywordtype">double</span> <span class="keyword">const</span> &amp; Z){</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="class_vector.html">Vector3D</a> wspolrzedne[8], wektorX, wektorY, wektorZ;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    wektorX[0] = X/2;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    wektorY[1] = Y/2;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    wektorZ[2] = Z/2;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    wspolrzedne[0] = wspolrzedne[0] - wektorX - wektorY - wektorZ;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    wspolrzedne[1] = wspolrzedne[1] + wektorX - wektorY - wektorZ;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    wspolrzedne[2] = wspolrzedne[2] - wektorX + wektorY - wektorZ;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    wspolrzedne[3] = wspolrzedne[3] + wektorX + wektorY - wektorZ;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    wspolrzedne[4] = wspolrzedne[4] - wektorX + wektorY + wektorZ;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    wspolrzedne[5] = wspolrzedne[5] + wektorX + wektorY + wektorZ;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    wspolrzedne[6] = wspolrzedne[6] - wektorX - wektorY + wektorZ;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    wspolrzedne[7] = wspolrzedne[7] + wektorX - wektorY + wektorZ;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <a class="code" href="classcuboid.html">cuboid</a> obiekt(A,wspolrzedne[0],wspolrzedne[1],wspolrzedne[2],wspolrzedne[3],wspolrzedne[4],wspolrzedne[5],wspolrzedne[6],wspolrzedne[7]);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <a class="code" href="classscena.html#ad1c370b924a3de1d1ffbd3d5afb81e22">obiekty_na_scenie</a>.push_back(obiekt); </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <a class="code" href="classscena.html#a2c1ca5aaa5df77c00ea49587b2cf71ca">macierze_obrotu</a>.push_back(<a class="code" href="matrix3x3_8hh.html#ac0b1a54ceafb28519afcbd8939668a70">Matrix3x3</a>());</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <a class="code" href="classscena.html#aee07a43031532bfc232d11470f8b6390">wektory_przesuniecia</a>.push_back(<a class="code" href="_vector3_d_8hh.html#a01090a0f6a3d1e7e9606819bd0fafda0">Vector3D</a>());   </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="amatrix3x3_8hh_html_ac0b1a54ceafb28519afcbd8939668a70"><div class="ttname"><a href="matrix3x3_8hh.html#ac0b1a54ceafb28519afcbd8939668a70">Matrix3x3</a></div><div class="ttdeci">Matrix&lt; 3 &gt; Matrix3x3</div><div class="ttdoc">Konkretyzacja szablonu klasy Matrix.</div><div class="ttdef"><b>Definition:</b> <a href="matrix3x3_8hh_source.html#l00011">matrix3x3.hh:11</a></div></div>
+<div class="ttc" id="aclassscena_html_a0a05317fba40019321f82de59d634d82"><div class="ttname"><a href="classscena.html#a0a05317fba40019321f82de59d634d82">scena::wektor_przesuniecia</a></div><div class="ttdeci">void wektor_przesuniecia(Vector3D const &amp;wektor, unsigned int index)</div><div class="ttdoc">przechowuje wektory przesuniecia</div><div class="ttdef"><b>Definition:</b> <a href="scena_8cpp_source.html#l00055">scena.cpp:55</a></div></div>
+<div class="ttc" id="aclassscena_html_a3d0fbde8b1ccc87f899d467807ffeda0"><div class="ttname"><a href="classscena.html#a3d0fbde8b1ccc87f899d467807ffeda0">scena::dodaj_obiekt</a></div><div class="ttdeci">void dodaj_obiekt(Vector3D const &amp;A, double const &amp;X, double const &amp;Y, double const &amp;Z)</div><div class="ttdoc">dodaje obiekt na scenę</div><div class="ttdef"><b>Definition:</b> <a href="scena_8cpp_source.html#l00083">scena.cpp:83</a></div></div>
+<div class="ttc" id="aclassscena_html_ad1c370b924a3de1d1ffbd3d5afb81e22"><div class="ttname"><a href="classscena.html#ad1c370b924a3de1d1ffbd3d5afb81e22">scena::obiekty_na_scenie</a></div><div class="ttdeci">std::vector&lt; cuboid &gt; obiekty_na_scenie</div><div class="ttdoc">pole przechowujace informacje o obiektach znajdujacych sie na scenie</div><div class="ttdef"><b>Definition:</b> <a href="scena_8hh_source.html#l00023">scena.hh:23</a></div></div>
+<div class="ttc" id="aclassscena_html_aee07a43031532bfc232d11470f8b6390"><div class="ttname"><a href="classscena.html#aee07a43031532bfc232d11470f8b6390">scena::wektory_przesuniecia</a></div><div class="ttdeci">std::vector&lt; Vector3D &gt; wektory_przesuniecia</div><div class="ttdoc">pole przechowujace informacje o wektorach przesuniecia</div><div class="ttdef"><b>Definition:</b> <a href="scena_8hh_source.html#l00029">scena.hh:29</a></div></div>
+<div class="ttc" id="aclassscena_html_a049fbf6e48e9c7cc1be5ff45ee420365"><div class="ttname"><a href="classscena.html#a049fbf6e48e9c7cc1be5ff45ee420365">scena::przesun</a></div><div class="ttdeci">void przesun(unsigned int index)</div><div class="ttdoc">umozliwia przesuwanie obiektu na scenie</div><div class="ttdef"><b>Definition:</b> <a href="scena_8cpp_source.html#l00067">scena.cpp:67</a></div></div>
+<div class="ttc" id="aclassscena_html_a2c1ca5aaa5df77c00ea49587b2cf71ca"><div class="ttname"><a href="classscena.html#a2c1ca5aaa5df77c00ea49587b2cf71ca">scena::macierze_obrotu</a></div><div class="ttdeci">std::vector&lt; Matrix3x3 &gt; macierze_obrotu</div><div class="ttdoc">pole przechowujace informacje o macierzach obrotu</div><div class="ttdef"><b>Definition:</b> <a href="scena_8hh_source.html#l00026">scena.hh:26</a></div></div>
+<div class="ttc" id="aclassscena_html_a8c8e403835cb87c8fef2aaee42347cab"><div class="ttname"><a href="classscena.html#a8c8e403835cb87c8fef2aaee42347cab">scena::operator[]</a></div><div class="ttdeci">const cuboid &amp; operator[](unsigned int index) const</div><div class="ttdoc">Przeciazenie operatora indeksujacego.</div><div class="ttdef"><b>Definition:</b> <a href="scena_8cpp_source.html#l00028">scena.cpp:28</a></div></div>
+<div class="ttc" id="aclasscuboid_html"><div class="ttname"><a href="classcuboid.html">cuboid</a></div><div class="ttdef"><b>Definition:</b> <a href="_cuboid_8hh_source.html#l00022">Cuboid.hh:22</a></div></div>
+<div class="ttc" id="aclassscena_html_a152626dcaf5c3bbb9c803a3134999d2f"><div class="ttname"><a href="classscena.html#a152626dcaf5c3bbb9c803a3134999d2f">scena::scena</a></div><div class="ttdeci">scena()</div><div class="ttdoc">konstruktor bezparametryczny</div><div class="ttdef"><b>Definition:</b> <a href="scena_8cpp_source.html#l00013">scena.cpp:13</a></div></div>
+<div class="ttc" id="a_vector3_d_8hh_html_a01090a0f6a3d1e7e9606819bd0fafda0"><div class="ttname"><a href="_vector3_d_8hh.html#a01090a0f6a3d1e7e9606819bd0fafda0">Vector3D</a></div><div class="ttdeci">Vector&lt; 3 &gt; Vector3D</div><div class="ttdoc">Konkretyzacja szablonu klasy vector.</div><div class="ttdef"><b>Definition:</b> <a href="_vector3_d_8hh_source.html#l00010">Vector3D.hh:10</a></div></div>
+<div class="ttc" id="aclassscena_html_aaf6e7e436854da4ca599bf19a8622d9e"><div class="ttname"><a href="classscena.html#aaf6e7e436854da4ca599bf19a8622d9e">scena::macierz_rotacji</a></div><div class="ttdeci">void macierz_rotacji(Matrix3x3 const &amp;macierz, unsigned int index)</div><div class="ttdoc">przechowuje macierze rotacji</div><div class="ttdef"><b>Definition:</b> <a href="scena_8cpp_source.html#l00042">scena.cpp:42</a></div></div>
+<div class="ttc" id="ascena_8hh_html"><div class="ttname"><a href="scena_8hh.html">scena.hh</a></div><div class="ttdoc">klasa scena</div></div>
+<div class="ttc" id="aclass_vector_html"><div class="ttname"><a href="class_vector.html">Vector&lt; 3 &gt;</a></div></div>
+<div class="ttc" id="aclass_matrix_html"><div class="ttname"><a href="class_matrix.html">Matrix</a></div><div class="ttdef"><b>Definition:</b> <a href="matrix_8hh_source.html#l00015">matrix.hh:15</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="scena_8cpp.html">scena.cpp</a></li>
+    <li class="footer">Wygenerowano przez
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Rotacje 3D: Plik źródłowy Cuboid.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Rotacje 3D
+   &#160;<span id="projectnumber">1.0 v.</span>
+   </div>
+   <div id="projectbrief">Adam Domachowski nr 259229.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_cuboid_8hh_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Cuboid.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_cuboid_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once  </span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;iomanip&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_vector3_d_8hh.html">Vector3D.hh</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="matrix3x3_8hh.html">matrix3x3.hh</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="matrix_8hh.html">matrix.hh</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="lacze__do__gnuplota_8hh.html">lacze_do_gnuplota.hh</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="size_8hh.html">size.hh</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classcuboid.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcuboid.html">cuboid</a> {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classcuboid.html#afc7f902eae6133d94c6fde140119b026">   26</a></span>&#160;    <a class="code" href="class_vector.html">Vector3D</a> <a class="code" href="classcuboid.html#afc7f902eae6133d94c6fde140119b026">srodek</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classcuboid.html#ae8d217ec8e54e1c60fdcbf896e36803b">   29</a></span>&#160;    <a class="code" href="class_vector.html">Vector3D</a> <a class="code" href="classcuboid.html#ae8d217ec8e54e1c60fdcbf896e36803b">wierzcholki_lokalne</a>[8];</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classcuboid.html#a33235bbc6e877c3b2c7cacbb10e54301">   32</a></span>&#160;    <a class="code" href="class_vector.html">Vector3D</a> <a class="code" href="classcuboid.html#a33235bbc6e877c3b2c7cacbb10e54301">wierzcholki_globalne</a>[8];</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classcuboid.html#af14793cc08af1cc90f92da6c7c827164">cuboid</a> ();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="classcuboid.html#af14793cc08af1cc90f92da6c7c827164">cuboid</a>(<a class="code" href="class_vector.html">Vector3D</a> <a class="code" href="classcuboid.html#afc7f902eae6133d94c6fde140119b026">srodek</a>, <a class="code" href="class_vector.html">Vector3D</a> I, <a class="code" href="class_vector.html">Vector3D</a> II, <a class="code" href="class_vector.html">Vector3D</a> III, <a class="code" href="class_vector.html">Vector3D</a> IV, <a class="code" href="class_vector.html">Vector3D</a> V, <a class="code" href="class_vector.html">Vector3D</a> VI, <a class="code" href="class_vector.html">Vector3D</a> VII, <a class="code" href="class_vector.html">Vector3D</a> VIII);          </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_vector.html">Vector3D</a> &amp;<a class="code" href="classcuboid.html#a48c0950a29d42f77168098efaa04b03d">operator[] </a>(<span class="keywordtype">int</span> row) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="class_vector.html">Vector3D</a>  &amp;<a class="code" href="classcuboid.html#a48c0950a29d42f77168098efaa04b03d">operator[] </a>(<span class="keywordtype">int</span> row);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcuboid.html#abb2b9d47dc129831bbc45e393743e7e8">translacja</a>(<a class="code" href="class_vector.html">Vector3D</a> <span class="keyword">const</span> &amp; wektor_przes, <a class="code" href="class_matrix.html">Matrix3x3</a> <span class="keyword">const</span> &amp; macierz);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcuboid.html#a286327870a7057e8415abcd62ecc7a1a">zapisz</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *sNazwaPliku) <span class="keyword">const</span>;  </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;};</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;std::istream &amp;<a class="code" href="_cuboid_8hh.html#a54f98085f558b14c5790958b05f305cd">operator&gt;&gt;</a>(std::istream &amp;in, <a class="code" href="classcuboid.html">cuboid</a> &amp;rec);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<a class="code" href="doctest_8h.html#a116af65cb5e924b33ad9d9ecd7a783f3">std::ostream</a> &amp;<a class="code" href="_cuboid_8hh.html#a216fb18b18436b6be0d5c4e3086e2ec3">operator&lt;&lt;</a>(<a class="code" href="doctest_8h.html#a116af65cb5e924b33ad9d9ecd7a783f3">std::ostream</a> &amp;out, <a class="code" href="classcuboid.html">cuboid</a> <span class="keyword">const</span> &amp;rec);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclasscuboid_html_a286327870a7057e8415abcd62ecc7a1a"><div class="ttname"><a href="classcuboid.html#a286327870a7057e8415abcd62ecc7a1a">cuboid::zapisz</a></div><div class="ttdeci">void zapisz(const char *sNazwaPliku) const</div><div class="ttdoc">zapisuje wierzcholki do pliku</div><div class="ttdef"><b>Definition:</b> <a href="cuboid_8cpp_source.html#l00129">cuboid.cpp:129</a></div></div>
+<div class="ttc" id="asize_8hh_html"><div class="ttname"><a href="size_8hh.html">size.hh</a></div><div class="ttdoc">definicje stalych</div></div>
+<div class="ttc" id="adoctest_8h_html_a116af65cb5e924b33ad9d9ecd7a783f3"><div class="ttname"><a href="doctest_8h.html#a116af65cb5e924b33ad9d9ecd7a783f3">ostream</a></div><div class="ttdeci">basic_ostream&lt; char, char_traits&lt; char &gt; &gt; ostream</div><div class="ttdef"><b>Definition:</b> <a href="doctest_8h_source.html#l00425">doctest.h:425</a></div></div>
+<div class="ttc" id="amatrix_8hh_html"><div class="ttname"><a href="matrix_8hh.html">matrix.hh</a></div><div class="ttdoc">klasa matrix odpowiada za wszystkie dzialania na macierzach</div></div>
+<div class="ttc" id="aclasscuboid_html_abb2b9d47dc129831bbc45e393743e7e8"><div class="ttname"><a href="classcuboid.html#abb2b9d47dc129831bbc45e393743e7e8">cuboid::translacja</a></div><div class="ttdeci">void translacja(Vector3D const &amp;wektor_przes, Matrix3x3 const &amp;macierz)</div><div class="ttdoc">odpowiada za zmiane polorzenia prostopadloscianu</div><div class="ttdef"><b>Definition:</b> <a href="cuboid_8cpp_source.html#l00084">cuboid.cpp:84</a></div></div>
+<div class="ttc" id="a_cuboid_8hh_html_a216fb18b18436b6be0d5c4e3086e2ec3"><div class="ttname"><a href="_cuboid_8hh.html#a216fb18b18436b6be0d5c4e3086e2ec3">operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, cuboid const &amp;rec)</div><div class="ttdoc">przeciazony operator wyjscia</div><div class="ttdef"><b>Definition:</b> <a href="cuboid_8cpp_source.html#l00113">cuboid.cpp:113</a></div></div>
+<div class="ttc" id="aclasscuboid_html"><div class="ttname"><a href="classcuboid.html">cuboid</a></div><div class="ttdef"><b>Definition:</b> <a href="_cuboid_8hh_source.html#l00022">Cuboid.hh:22</a></div></div>
+<div class="ttc" id="aclasscuboid_html_afc7f902eae6133d94c6fde140119b026"><div class="ttname"><a href="classcuboid.html#afc7f902eae6133d94c6fde140119b026">cuboid::srodek</a></div><div class="ttdeci">Vector3D srodek</div><div class="ttdoc">przechowuje wspolrzedne srodka prostopadloscianu</div><div class="ttdef"><b>Definition:</b> <a href="_cuboid_8hh_source.html#l00026">Cuboid.hh:26</a></div></div>
+<div class="ttc" id="alacze__do__gnuplota_8hh_html"><div class="ttname"><a href="lacze__do__gnuplota_8hh.html">lacze_do_gnuplota.hh</a></div></div>
+<div class="ttc" id="aclasscuboid_html_a48c0950a29d42f77168098efaa04b03d"><div class="ttname"><a href="classcuboid.html#a48c0950a29d42f77168098efaa04b03d">cuboid::operator[]</a></div><div class="ttdeci">const Vector3D &amp; operator[](int row) const</div><div class="ttdoc">przeciazany operator indeksujacy</div><div class="ttdef"><b>Definition:</b> <a href="cuboid_8cpp_source.html#l00056">cuboid.cpp:56</a></div></div>
+<div class="ttc" id="aclasscuboid_html_a33235bbc6e877c3b2c7cacbb10e54301"><div class="ttname"><a href="classcuboid.html#a33235bbc6e877c3b2c7cacbb10e54301">cuboid::wierzcholki_globalne</a></div><div class="ttdeci">Vector3D wierzcholki_globalne[8]</div><div class="ttdoc">tablica wektorow dzieki ktorym uzyskujemy wspolrzedne wierzchowlkow ( w ukladzie globalnym )</div><div class="ttdef"><b>Definition:</b> <a href="_cuboid_8hh_source.html#l00032">Cuboid.hh:32</a></div></div>
+<div class="ttc" id="aclasscuboid_html_af14793cc08af1cc90f92da6c7c827164"><div class="ttname"><a href="classcuboid.html#af14793cc08af1cc90f92da6c7c827164">cuboid::cuboid</a></div><div class="ttdeci">cuboid()</div><div class="ttdoc">konstruktor bezparametryczny</div><div class="ttdef"><b>Definition:</b> <a href="cuboid_8cpp_source.html#l00015">cuboid.cpp:15</a></div></div>
+<div class="ttc" id="aclasscuboid_html_ae8d217ec8e54e1c60fdcbf896e36803b"><div class="ttname"><a href="classcuboid.html#ae8d217ec8e54e1c60fdcbf896e36803b">cuboid::wierzcholki_lokalne</a></div><div class="ttdeci">Vector3D wierzcholki_lokalne[8]</div><div class="ttdoc">tablica wektorow dzieki ktorym uzyskujemy wspolrzedne wierzchowlkow ( w ukladzie lokalnym )</div><div class="ttdef"><b>Definition:</b> <a href="_cuboid_8hh_source.html#l00029">Cuboid.hh:29</a></div></div>
+<div class="ttc" id="aclass_vector_html"><div class="ttname"><a href="class_vector.html">Vector&lt; 3 &gt;</a></div></div>
+<div class="ttc" id="aclass_matrix_html"><div class="ttname"><a href="class_matrix.html">Matrix</a></div><div class="ttdef"><b>Definition:</b> <a href="matrix_8hh_source.html#l00015">matrix.hh:15</a></div></div>
+<div class="ttc" id="a_vector3_d_8hh_html"><div class="ttname"><a href="_vector3_d_8hh.html">Vector3D.hh</a></div><div class="ttdoc">konkretyzacja szablonu vector</div></div>
+<div class="ttc" id="a_cuboid_8hh_html_a54f98085f558b14c5790958b05f305cd"><div class="ttname"><a href="_cuboid_8hh.html#a54f98085f558b14c5790958b05f305cd">operator&gt;&gt;</a></div><div class="ttdeci">std::istream &amp; operator&gt;&gt;(std::istream &amp;in, cuboid &amp;rec)</div><div class="ttdoc">przeciarzany opearator wejscia</div><div class="ttdef"><b>Definition:</b> <a href="cuboid_8cpp_source.html#l00098">cuboid.cpp:98</a></div></div>
+<div class="ttc" id="amatrix3x3_8hh_html"><div class="ttname"><a href="matrix3x3_8hh.html">matrix3x3.hh</a></div><div class="ttdoc">konkretyzacja szablonu matrix oraz funkcje odpwiedzialne za obrot prostopadloscianu</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="_cuboid_8hh.html">Cuboid.hh</a></li>
+    <li class="footer">Wygenerowano przez
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

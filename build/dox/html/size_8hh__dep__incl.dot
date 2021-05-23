@@ -1,0 +1,50 @@
+digraph "size.hh"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="size.hh",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="definicje stalych"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="vector.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$vector_8hh.html",tooltip="klasa vector odpowiada za wszystkie dzialania na wektorach"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$app_2main_8cpp.html",tooltip=" "];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Vector3D.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_vector3_d_8hh.html",tooltip="konkretyzacja szablonu vector"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Cuboid.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_cuboid_8hh.html",tooltip="klasa cuboid przechowuje informacje o wierzcholkach (w formie wektorów) prostopadloscianu...."];
+  Node5 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="scena.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$scena_8hh.html",tooltip="klasa scena"];
+  Node6 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="scena.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$scena_8cpp.html",tooltip="metody klasy scena"];
+  Node5 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="cuboid.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$cuboid_8cpp.html",tooltip="metody klasy Cuboid"];
+  Node5 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="tests.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$tests_8cpp.html",tooltip=" "];
+  Node4 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="matrix.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$matrix_8hh.html",tooltip="klasa matrix odpowiada za wszystkie dzialania na macierzach"];
+  Node10 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="matrix3x3.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$matrix3x3_8hh.html",tooltip="konkretyzacja szablonu matrix oraz funkcje odpwiedzialne za obrot prostopadloscianu"];
+  Node11 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="matrix3x3.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$matrix3x3_8cpp.html",tooltip=" "];
+  Node11 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="matrix2x2.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$matrix2x2_8hh.html",tooltip="konkretyzacja szablonu matrix"];
+  Node13 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="Vector2D.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_vector2_d_8hh.html",tooltip="konkretyzacja szablonu vector"];
+  Node14 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

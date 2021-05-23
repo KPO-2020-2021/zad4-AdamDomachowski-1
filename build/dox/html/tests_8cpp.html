@@ -1,0 +1,681 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Rotacje 3D: Dokumentacja pliku tests.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Rotacje 3D
+   &#160;<span id="projectnumber">1.0 v.</span>
+   </div>
+   <div id="projectbrief">Adam Domachowski nr 259229.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('tests_8cpp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Definicje</a> &#124;
+<a href="#func-members">Funkcje</a> &#124;
+<a href="#var-members">Zmienne</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja pliku tests.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="doctest_8h_source.html">../tests/doctest/doctest.h</a>&quot;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="vector_8hh_source.html">vector.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_vector2_d_8hh_source.html">Vector2D.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_vector3_d_8hh_source.html">Vector3D.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="matrix_8hh_source.html">matrix.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="matrix2x2_8hh_source.html">matrix2x2.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="matrix3x3_8hh_source.html">matrix3x3.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_cuboid_8hh_source.html">Cuboid.hh</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Wykres zależności załączania dla tests.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="tests_8cpp__incl.png" border="0" usemap="#tests_8cpp" alt=""/></div>
+</div>
+</div>
+<p><a href="tests_8cpp_source.html">Idź do kodu źródłowego tego pliku.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Definicje</h2></td></tr>
+<tr class="memitem:a623b8690a262536536a43eab2d7df03d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8cpp.html#a623b8690a262536536a43eab2d7df03d">DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN</a></td></tr>
+<tr class="separator:a623b8690a262536536a43eab2d7df03d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funkcje</h2></td></tr>
+<tr class="memitem:a4536120dec15fe714640d957e3f95abd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8cpp.html#a4536120dec15fe714640d957e3f95abd">TEST_CASE</a> (&quot;odczytywanie wartosci wektora.&quot;)</td></tr>
+<tr class="separator:a4536120dec15fe714640d957e3f95abd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a694802a2078d228663a81e25c85edcb9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8cpp.html#a694802a2078d228663a81e25c85edcb9">TEST_CASE</a> (&quot;wprowadzanie danych do wektora&quot;)</td></tr>
+<tr class="separator:a694802a2078d228663a81e25c85edcb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c7a9d11372fba6b51cf85e1947cb99d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8cpp.html#a9c7a9d11372fba6b51cf85e1947cb99d">TEST_CASE</a> (&quot;konstrukor bezparametryczny&quot;)</td></tr>
+<tr class="separator:a9c7a9d11372fba6b51cf85e1947cb99d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a485475d4a0b344ba7280cf606f0e4945"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8cpp.html#a485475d4a0b344ba7280cf606f0e4945">TEST_CASE</a> (&quot;konstruktor parametryczny&quot;)</td></tr>
+<tr class="separator:a485475d4a0b344ba7280cf606f0e4945"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62892201d97bfdbe0b1c7ecd7c15a7e9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8cpp.html#a62892201d97bfdbe0b1c7ecd7c15a7e9">TEST_CASE</a> (&quot;operatora indeksowania - za duzy/maly indeks&quot;)</td></tr>
+<tr class="separator:a62892201d97bfdbe0b1c7ecd7c15a7e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a849a9f7d2e30bbb522724d4e44a9cd1c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8cpp.html#a849a9f7d2e30bbb522724d4e44a9cd1c">TEST_CASE</a> (&quot;wypisanie wektora&quot;)</td></tr>
+<tr class="separator:a849a9f7d2e30bbb522724d4e44a9cd1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2304dc19871b02d1baa5fdc92c08d7c7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8cpp.html#a2304dc19871b02d1baa5fdc92c08d7c7">TEST_CASE</a> (&quot;wczytywanie wartosci do wektora3D ( &gt;&gt; ).&quot;)</td></tr>
+<tr class="separator:a2304dc19871b02d1baa5fdc92c08d7c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65218f0d34b6ee060a4e62278651590e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8cpp.html#a65218f0d34b6ee060a4e62278651590e">TEST_CASE</a> (&quot;dodawanie dwoch wektorow.&quot;)</td></tr>
+<tr class="separator:a65218f0d34b6ee060a4e62278651590e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1caaaf00e5d600d44988820cbb765477"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8cpp.html#a1caaaf00e5d600d44988820cbb765477">TEST_CASE</a> (&quot;odejmowanie dwoch wektorow.&quot;)</td></tr>
+<tr class="separator:a1caaaf00e5d600d44988820cbb765477"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee614ebeb3dc8626e8b7b873f104566f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8cpp.html#aee614ebeb3dc8626e8b7b873f104566f">TEST_CASE</a> (&quot;mnozenie wektora3D i liczby.&quot;)</td></tr>
+<tr class="separator:aee614ebeb3dc8626e8b7b873f104566f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ffae60b0364fd7c25dde9a2cad9797c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8cpp.html#a2ffae60b0364fd7c25dde9a2cad9797c">TEST_CASE</a> (&quot;dzielenie wektora3D przez liczbe typu double.&quot;)</td></tr>
+<tr class="separator:a2ffae60b0364fd7c25dde9a2cad9797c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bbd1b60a6ff0a6b7745ded70f4607a4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8cpp.html#a3bbd1b60a6ff0a6b7745ded70f4607a4">TEST_CASE</a> (&quot;dzielenie wektora3D przez 0.&quot;)</td></tr>
+<tr class="separator:a3bbd1b60a6ff0a6b7745ded70f4607a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae798e6405f78ed82ed472042e91c965b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8cpp.html#ae798e6405f78ed82ed472042e91c965b">for</a> (int i=0;i&lt; <a class="el" href="size_8hh.html#a0ae4b10cd6576f2ccf0da832de940dae">SIZE</a>;i++)</td></tr>
+<tr class="separator:ae798e6405f78ed82ed472042e91c965b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a307fad58caa6c1a337943a9cbd6b41d0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8cpp.html#a307fad58caa6c1a337943a9cbd6b41d0">TEST_CASE</a> (&quot;vector - operator +&quot;)</td></tr>
+<tr class="separator:a307fad58caa6c1a337943a9cbd6b41d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7617ef5b7afaebbf575e0906a1b90be1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8cpp.html#a7617ef5b7afaebbf575e0906a1b90be1">TEST_CASE</a> (&quot;vector - operator -&quot;)</td></tr>
+<tr class="separator:a7617ef5b7afaebbf575e0906a1b90be1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a467d3f4c001aa7ffe0959326da9f5f84"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8cpp.html#a467d3f4c001aa7ffe0959326da9f5f84">TEST_CASE</a> (&quot;vector - operator [out of size]&quot;)</td></tr>
+<tr class="separator:a467d3f4c001aa7ffe0959326da9f5f84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a519cabc65da2192f0b67473967fcb2c4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8cpp.html#a519cabc65da2192f0b67473967fcb2c4">TEST_CASE</a> (&quot;wczytywanie i odczytywania wartosci&quot;)</td></tr>
+<tr class="separator:a519cabc65da2192f0b67473967fcb2c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3273f749b2baa6ea754376a68287501f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8cpp.html#a3273f749b2baa6ea754376a68287501f">TEST_CASE</a> (&quot;mnozenie macierzy2x2 i wektora.&quot;)</td></tr>
+<tr class="separator:a3273f749b2baa6ea754376a68287501f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77a8646dec7d0f3976d433190df19095"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8cpp.html#a77a8646dec7d0f3976d433190df19095">TEST_CASE</a> (&quot;mnozenie macierzy przez macierz.&quot;)</td></tr>
+<tr class="separator:a77a8646dec7d0f3976d433190df19095"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86c1eef7727dde0a8e4c6dd5cab7ee6b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8cpp.html#a86c1eef7727dde0a8e4c6dd5cab7ee6b">TEST_CASE</a> (&quot;dodawanie dwoch macierzy&quot;)</td></tr>
+<tr class="separator:a86c1eef7727dde0a8e4c6dd5cab7ee6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a3f3e50dd6526ba0ba0e9ed4859c95f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8cpp.html#a9a3f3e50dd6526ba0ba0e9ed4859c95f">TEST_CASE</a> (&quot;porownanie dwoch takich samych macierzy.&quot;)</td></tr>
+<tr class="separator:a9a3f3e50dd6526ba0ba0e9ed4859c95f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0225d0aefdc2e7906ed6a8829aa3684"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8cpp.html#ae0225d0aefdc2e7906ed6a8829aa3684">TEST_CASE</a> (&quot;porownanie dwoch roznych macierzy.&quot;)</td></tr>
+<tr class="separator:ae0225d0aefdc2e7906ed6a8829aa3684"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22485085d063480f2d9afef5fa55bfd1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8cpp.html#a22485085d063480f2d9afef5fa55bfd1">TEST_CASE</a> (&quot;reset macierzy.&quot;)</td></tr>
+<tr class="separator:a22485085d063480f2d9afef5fa55bfd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Zmienne</h2></td></tr>
+<tr class="memitem:a899dc80711883fbc95e29c5457ca8503"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_vector2_d_8hh.html#af4760457e8ece71e04104c08ad65bbce">Vector2D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8cpp.html#a899dc80711883fbc95e29c5457ca8503">test</a> = <a class="el" href="_vector2_d_8hh.html#af4760457e8ece71e04104c08ad65bbce">Vector2D</a>(example)</td></tr>
+<tr class="separator:a899dc80711883fbc95e29c5457ca8503"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Dokumentacja definicji</h2>
+<a id="a623b8690a262536536a43eab2d7df03d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a623b8690a262536536a43eab2d7df03d">&#9670;&nbsp;</a></span>DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="tests_8cpp_source.html#l00001">1</a> pliku <a class="el" href="tests_8cpp_source.html">tests.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja funkcji</h2>
+<a id="ae798e6405f78ed82ed472042e91c965b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae798e6405f78ed82ed472042e91c965b">&#9670;&nbsp;</a></span>for()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">for </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="tests_8cpp_source.html#l00108">108</a> pliku <a class="el" href="tests_8cpp_source.html">tests.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a86c1eef7727dde0a8e4c6dd5cab7ee6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86c1eef7727dde0a8e4c6dd5cab7ee6b">&#9670;&nbsp;</a></span>TEST_CASE() <span class="overload">[1/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;dodawanie dwoch macierzy&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="tests_8cpp_source.html#l00272">272</a> pliku <a class="el" href="tests_8cpp_source.html">tests.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a65218f0d34b6ee060a4e62278651590e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65218f0d34b6ee060a4e62278651590e">&#9670;&nbsp;</a></span>TEST_CASE() <span class="overload">[2/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;dodawanie dwoch wektorow.&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="tests_8cpp_source.html#l00067">67</a> pliku <a class="el" href="tests_8cpp_source.html">tests.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a3bbd1b60a6ff0a6b7745ded70f4607a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bbd1b60a6ff0a6b7745ded70f4607a4">&#9670;&nbsp;</a></span>TEST_CASE() <span class="overload">[3/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;dzielenie wektora3D przez 0.&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="tests_8cpp_source.html#l00095">95</a> pliku <a class="el" href="tests_8cpp_source.html">tests.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2ffae60b0364fd7c25dde9a2cad9797c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ffae60b0364fd7c25dde9a2cad9797c">&#9670;&nbsp;</a></span>TEST_CASE() <span class="overload">[4/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;dzielenie wektora3D przez liczbe typu double.&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="tests_8cpp_source.html#l00088">88</a> pliku <a class="el" href="tests_8cpp_source.html">tests.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a9c7a9d11372fba6b51cf85e1947cb99d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c7a9d11372fba6b51cf85e1947cb99d">&#9670;&nbsp;</a></span>TEST_CASE() <span class="overload">[5/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;konstrukor bezparametryczny&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="tests_8cpp_source.html#l00035">35</a> pliku <a class="el" href="tests_8cpp_source.html">tests.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a485475d4a0b344ba7280cf606f0e4945"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a485475d4a0b344ba7280cf606f0e4945">&#9670;&nbsp;</a></span>TEST_CASE() <span class="overload">[6/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;konstruktor parametryczny&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="tests_8cpp_source.html#l00040">40</a> pliku <a class="el" href="tests_8cpp_source.html">tests.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a77a8646dec7d0f3976d433190df19095"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77a8646dec7d0f3976d433190df19095">&#9670;&nbsp;</a></span>TEST_CASE() <span class="overload">[7/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;mnozenie macierzy przez macierz.&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="tests_8cpp_source.html#l00250">250</a> pliku <a class="el" href="tests_8cpp_source.html">tests.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a3273f749b2baa6ea754376a68287501f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3273f749b2baa6ea754376a68287501f">&#9670;&nbsp;</a></span>TEST_CASE() <span class="overload">[8/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;mnozenie macierzy2x2 i wektora.&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="tests_8cpp_source.html#l00242">242</a> pliku <a class="el" href="tests_8cpp_source.html">tests.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aee614ebeb3dc8626e8b7b873f104566f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee614ebeb3dc8626e8b7b873f104566f">&#9670;&nbsp;</a></span>TEST_CASE() <span class="overload">[9/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;mnozenie wektora3D i liczby.&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="tests_8cpp_source.html#l00081">81</a> pliku <a class="el" href="tests_8cpp_source.html">tests.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4536120dec15fe714640d957e3f95abd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4536120dec15fe714640d957e3f95abd">&#9670;&nbsp;</a></span>TEST_CASE() <span class="overload">[10/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;odczytywanie wartosci wektora.&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="tests_8cpp_source.html#l00016">16</a> pliku <a class="el" href="tests_8cpp_source.html">tests.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a1caaaf00e5d600d44988820cbb765477"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1caaaf00e5d600d44988820cbb765477">&#9670;&nbsp;</a></span>TEST_CASE() <span class="overload">[11/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;odejmowanie dwoch wektorow.&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="tests_8cpp_source.html#l00074">74</a> pliku <a class="el" href="tests_8cpp_source.html">tests.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a62892201d97bfdbe0b1c7ecd7c15a7e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62892201d97bfdbe0b1c7ecd7c15a7e9">&#9670;&nbsp;</a></span>TEST_CASE() <span class="overload">[12/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;operatora indeksowania - za duzy/maly indeks&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="tests_8cpp_source.html#l00046">46</a> pliku <a class="el" href="tests_8cpp_source.html">tests.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae0225d0aefdc2e7906ed6a8829aa3684"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0225d0aefdc2e7906ed6a8829aa3684">&#9670;&nbsp;</a></span>TEST_CASE() <span class="overload">[13/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;porownanie dwoch roznych macierzy.&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="tests_8cpp_source.html#l00285">285</a> pliku <a class="el" href="tests_8cpp_source.html">tests.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a9a3f3e50dd6526ba0ba0e9ed4859c95f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a3f3e50dd6526ba0ba0e9ed4859c95f">&#9670;&nbsp;</a></span>TEST_CASE() <span class="overload">[14/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;porownanie dwoch takich samych macierzy.&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="tests_8cpp_source.html#l00279">279</a> pliku <a class="el" href="tests_8cpp_source.html">tests.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a22485085d063480f2d9afef5fa55bfd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22485085d063480f2d9afef5fa55bfd1">&#9670;&nbsp;</a></span>TEST_CASE() <span class="overload">[15/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;reset macierzy.&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="tests_8cpp_source.html#l00291">291</a> pliku <a class="el" href="tests_8cpp_source.html">tests.cpp</a>.</p>
+<div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="tests_8cpp_a22485085d063480f2d9afef5fa55bfd1_cgraph.png" border="0" usemap="#tests_8cpp_a22485085d063480f2d9afef5fa55bfd1_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a307fad58caa6c1a337943a9cbd6b41d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a307fad58caa6c1a337943a9cbd6b41d0">&#9670;&nbsp;</a></span>TEST_CASE() <span class="overload">[16/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;vector - operator +&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="tests_8cpp_source.html#l00123">123</a> pliku <a class="el" href="tests_8cpp_source.html">tests.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7617ef5b7afaebbf575e0906a1b90be1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7617ef5b7afaebbf575e0906a1b90be1">&#9670;&nbsp;</a></span>TEST_CASE() <span class="overload">[17/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;vector - operator -&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="tests_8cpp_source.html#l00140">140</a> pliku <a class="el" href="tests_8cpp_source.html">tests.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a467d3f4c001aa7ffe0959326da9f5f84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a467d3f4c001aa7ffe0959326da9f5f84">&#9670;&nbsp;</a></span>TEST_CASE() <span class="overload">[18/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;vector - operator &quot;&#160;</td>
+          <td class="paramname">[out of size]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="tests_8cpp_source.html#l00191">191</a> pliku <a class="el" href="tests_8cpp_source.html">tests.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a519cabc65da2192f0b67473967fcb2c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a519cabc65da2192f0b67473967fcb2c4">&#9670;&nbsp;</a></span>TEST_CASE() <span class="overload">[19/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;wczytywanie i odczytywania wartosci&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="tests_8cpp_source.html#l00213">213</a> pliku <a class="el" href="tests_8cpp_source.html">tests.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2304dc19871b02d1baa5fdc92c08d7c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2304dc19871b02d1baa5fdc92c08d7c7">&#9670;&nbsp;</a></span>TEST_CASE() <span class="overload">[20/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;wczytywanie wartosci do wektora3D ( &gt;&gt; ).&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="tests_8cpp_source.html#l00060">60</a> pliku <a class="el" href="tests_8cpp_source.html">tests.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a694802a2078d228663a81e25c85edcb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a694802a2078d228663a81e25c85edcb9">&#9670;&nbsp;</a></span>TEST_CASE() <span class="overload">[21/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;wprowadzanie danych do wektora&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="tests_8cpp_source.html#l00026">26</a> pliku <a class="el" href="tests_8cpp_source.html">tests.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a849a9f7d2e30bbb522724d4e44a9cd1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a849a9f7d2e30bbb522724d4e44a9cd1c">&#9670;&nbsp;</a></span>TEST_CASE() <span class="overload">[22/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;wypisanie wektora&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="tests_8cpp_source.html#l00052">52</a> pliku <a class="el" href="tests_8cpp_source.html">tests.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja zmiennych</h2>
+<a id="a899dc80711883fbc95e29c5457ca8503"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a899dc80711883fbc95e29c5457ca8503">&#9670;&nbsp;</a></span>test</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_vector2_d_8hh.html#af4760457e8ece71e04104c08ad65bbce">Vector2D</a> test = <a class="el" href="_vector2_d_8hh.html#af4760457e8ece71e04104c08ad65bbce">Vector2D</a>(example)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="tests_8cpp_source.html#l00117">117</a> pliku <a class="el" href="tests_8cpp_source.html">tests.cpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_59425e443f801f1f2fd8bbe4959a3ccf.html">tests</a></li><li class="navelem"><a class="el" href="tests_8cpp.html">tests.cpp</a></li>
+    <li class="footer">Wygenerowano przez
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

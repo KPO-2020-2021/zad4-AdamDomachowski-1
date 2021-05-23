@@ -1,0 +1,8 @@
+var searchData=
+[
+  ['platform_5fid_1869',['PLATFORM_ID',['../build_2_c_make_files_23_816_83_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID():&#160;CMakeCXXCompilerId.cpp'],['../cmake_2_c_make_files_23_816_83_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID():&#160;CMakeCXXCompilerId.cpp']]],
+  ['project_5fversion_5fmajor_1870',['PROJECT_VERSION_MAJOR',['../build_2example_config_8h.html#abecd2198575b690d25a741857f8390d1',1,'PROJECT_VERSION_MAJOR():&#160;exampleConfig.h'],['../cmake_2example_config_8h.html#abecd2198575b690d25a741857f8390d1',1,'PROJECT_VERSION_MAJOR():&#160;exampleConfig.h']]],
+  ['project_5fversion_5fminor_1871',['PROJECT_VERSION_MINOR',['../build_2example_config_8h.html#a43e23009192a3e216fefec17750d8673',1,'PROJECT_VERSION_MINOR():&#160;exampleConfig.h'],['../cmake_2example_config_8h.html#a43e23009192a3e216fefec17750d8673',1,'PROJECT_VERSION_MINOR():&#160;exampleConfig.h']]],
+  ['project_5fversion_5fpatch_1872',['PROJECT_VERSION_PATCH',['../build_2example_config_8h.html#a4a5fc96a4bdd7d68ed99ccce9ca2e77e',1,'PROJECT_VERSION_PATCH():&#160;exampleConfig.h'],['../cmake_2example_config_8h.html#a4a5fc96a4bdd7d68ed99ccce9ca2e77e',1,'PROJECT_VERSION_PATCH():&#160;exampleConfig.h']]],
+  ['project_5fversion_5ftweak_1873',['PROJECT_VERSION_TWEAK',['../build_2example_config_8h.html#ab0dfcac449e8e1f19b730d5444105584',1,'PROJECT_VERSION_TWEAK():&#160;exampleConfig.h'],['../cmake_2example_config_8h.html#ab0dfcac449e8e1f19b730d5444105584',1,'PROJECT_VERSION_TWEAK():&#160;exampleConfig.h']]]
+];
